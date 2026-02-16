@@ -415,8 +415,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/blas-base-dgemv.svg
 [npm-url]: https://npmjs.org/package/@stdlib/blas-base-dgemv
 
-[test-image]: https://github.com/stdlib-js/blas-base-dgemv/actions/workflows/test.yml/badge.svg?branch=v0.1.1
-[test-url]: https://github.com/stdlib-js/blas-base-dgemv/actions/workflows/test.yml?query=branch:v0.1.1
+[test-image]: https://github.com/stdlib-js/blas-base-dgemv/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/blas-base-dgemv/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-base-dgemv/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/blas-base-dgemv?branch=main
