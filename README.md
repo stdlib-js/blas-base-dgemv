@@ -35,19 +35,32 @@ limitations under the License.
 
 > Perform one of the matrix-vector operations `y = α*A*x + β*y` or `y = α*A^T*x + β*y`.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-dgemv
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import dgemv from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dgemv@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-dgemv/tags). For example,
-
-```javascript
-import dgemv from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dgemv@v0.1.1-esm/index.mjs';
+var dgemv = require( '@stdlib/blas-base-dgemv' );
 ```
 
 #### dgemv( order, trans, M, N, α, A, LDA, x, sx, β, y, sy )
@@ -55,7 +68,7 @@ import dgemv from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dgemv@v0.1.1-
 Performs one of the matrix-vector operations `y = α*A*x + β*y` or `y = α*A^T*x + β*y`, where `α` and `β` are scalars, `x` and `y` are vectors, and `A` is an `M` by `N` matrix.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var A = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var x = new Float64Array( [ 1.0, 1.0, 1.0 ] );
@@ -83,7 +96,7 @@ The function has the following parameters:
 The stride parameters determine how operations are performed. For example, to iterate over every other element in `x` and `y`,
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var A = new Float64Array( [ 1.0, 2.0, 3.0, 4.0 ] );
 var x = new Float64Array( [ 1.0, 0.0, 1.0, 0.0 ] );
@@ -98,7 +111,7 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 // Initial arrays...
 var x0 = new Float64Array( [ 0.0, 1.0, 1.0 ] );
@@ -120,7 +133,7 @@ dgemv( 'row-major', 'no-transpose', 2, 2, 1.0, A, 2, x1, -1, 1.0, y1, -1 );
 Performs one of the matrix-vector operations `y = α*A*x + β*y` or `y = α*A^T*x + β*y`, using alternative indexing semantics and where `α` and `β` are scalars, `x` and `y` are vectors, and `A` is an `M` by `N` matrix.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var A = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var x = new Float64Array( [ 1.0, 1.0, 1.0 ] );
@@ -141,7 +154,7 @@ The function has the following additional parameters:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying buffer, the offset parameters support indexing semantics based on starting indices. For example,
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var A = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var x = new Float64Array( [ 0.0, 1.0, 2.0, 3.0 ] );
@@ -171,14 +184,9 @@ dgemv.ndarray( 'no-transpose', 2, 3, 1.0, A, 3, 1, 0, x, 1, 1, 1.0, y, -2, 2 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import dgemv from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dgemv@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var dgemv = require( '@stdlib/blas-base-dgemv' );
 
 var opts = {
     'dtype': 'float64'
@@ -194,10 +202,6 @@ var y = discreteUniform( M, 0, 255, opts );
 dgemv( 'row-major', 'no-transpose', M, N, 1.0, A, N, x, -1, 1.0, y, -1 );
 console.log( y );
 
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -206,7 +210,163 @@ console.log( y );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/blas/base/dgemv.h"
+```
+
+#### c_dgemv( layout, trans, M, N, alpha, \*A, LDA, \*X, strideX, beta, \*Y, strideY )
+
+Performs one of the matrix-vector operations `y = α*A*x + β*y` or `y = α*A^T*x + β*y`, where `α` and `β` are scalars, `x` and `y` are vectors, and `A` is an `M` by `N` matrix.
+
+```c
+#include "stdlib/blas/base/shared.h"
+
+const double A[] = { 1.0, 0.0, 0.0, 2.0, 1.0, 0.0, 3.0, 2.0, 1.0 };
+const double x[] = { 1.0, 2.0, 3.0 };
+double y[] = { 1.0, 2.0, 3.0 };
+
+c_dgemv( CblasColMajor, CblasNoTrans, 3, 3, 1.0, A, 3, x, 1, 1.0, y, 1 );
+```
+
+The function accepts the following arguments:
+
+-   **layout**: `[in] CBLAS_LAYOUT` storage layout.
+-   **trans**: `[in] CBLAS_TRANSPOSE` specifies whether `A` should be transposed, conjugate-transposed, or not transposed.
+-   **M**: `[in] CBLAS_INT` number of rows in the matrix `A`.
+-   **N**: `[in] CBLAS_INT` number of columns in the matrix `A`.
+-   **alpha**: `[in] double` scalar constant.
+-   **A**: `[in] double*` input matrix.
+-   **LDA**: `[in] CBLAS_INT` stride of the first dimension of `A` (a.k.a., leading dimension of the matrix `A`).
+-   **X**: `[in] double*` first input vector.
+-   **strideX**: `[in] CBLAS_INT` stride length for `X`.
+-   **beta**: `[in] double` scalar constant.
+-   **Y**: `[inout] double*` second input vector.
+-   **strideY**: `[in] CBLAS_INT` stride length for `Y`.
+
+```c
+void c_dgemv( const CBLAS_LAYOUT layout, const CBLAS_TRANSPOSE trans, const CBLAS_INT M, const CBLAS_INT N, const double alpha, const double *A, const CBLAS_INT LDA, const double *X, const CBLAS_INT strideX, const double beta, double *Y, const CBLAS_INT strideY )
+```
+
+#### c_dgemv_ndarray( trans, M, N, alpha, \*A, sa1, sa2, oa, \*X, sx, ox, beta, \*Y, sy, oy )
+
+Performs one of the matrix-vector operations `y = α*A*x + β*y` or `y = α*A^T*x + β*y`, using indexing alternative semantics and where `α` and `β` are scalars, `x` and `y` are vectors, and `A` is an `M` by `N` matrix.
+
+```c
+#include "stdlib/blas/base/shared.h"
+
+const double A[] = { 1.0, 0.0, 0.0, 2.0, 1.0, 0.0, 3.0, 2.0, 1.0 };
+const double x[] = { 1.0, 2.0, 3.0 };
+double y[] = { 1.0, 2.0, 3.0 };
+
+c_dgemv_ndarray( CblasNoTrans, 3, 3, 1.0, A, 1, 3, 0, x, 1, 0, 1.0, y, 1, 0 );
+```
+
+The function accepts the following arguments:
+
+-   **trans**: `[in] CBLAS_TRANSPOSE` specifies whether `A` should be transposed, conjugate-transposed, or not transposed.
+-   **M**: `[in] CBLAS_INT` number of rows in the matrix `A`.
+-   **N**: `[in] CBLAS_INT` number of columns in the matrix `A`.
+-   **alpha**: `[in] double` scalar.
+-   **A**: `[in] double*` input matrix.
+-   **sa1**: `[in] CBLAS_INT` stride of the first dimension of `A`.
+-   **sa2**: `[in] CBLAS_INT` stride of the second dimension of `A`.
+-   **oa**: `[in] CBLAS_INT` starting index for `A`.
+-   **X**: `[in] double*` first input vector.
+-   **sx**: `[in] CBLAS_INT` stride length for `X`.
+-   **ox**: `[in] CBLAS_INT` starting index for `X`.
+-   **beta**: `[in] double` scalar.
+-   **Y**: `[inout] double*` second input vector.
+-   **sy**: `[in] CBLAS_INT` stride length for `Y`.
+-   **oy**: `[in] CBLAS_INT` starting index for `Y`.
+
+```c
+void c_dgemv_ndarray( const CBLAS_TRANSPOSE trans, const CBLAS_INT M, const CBLAS_INT N, const double alpha, const double *A, const CBLAS_INT strideA1, const CBLAS_INT strideA2, const CBLAS_INT offsetA, const double *X, const CBLAS_INT strideX, const CBLAS_INT offsetX, const double beta, double *Y, const CBLAS_INT strideY, const CBLAS_INT offsetY )
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/blas/base/dgemv.h"
+#include "stdlib/blas/base/shared.h"
+#include <stdio.h>
+
+int main( void ) {
+    // Define a 3x3 matrix stored in row-major order:
+    const double A[ 3*3 ] = {
+        1.0, 2.0, 3.0,
+        4.0, 5.0, 6.0,
+        7.0, 8.0, 9.0
+    };
+
+    // Define `x` and `y` vectors:
+    const double x[ 3 ] = { 1.0, 2.0, 3.0 };
+    double y[ 3 ] = { 1.0, 2.0, 3.0 };
+
+    // Specify the number of elements along each dimension of `A`:
+    const int M = 3;
+    const int N = 3;
+
+    // Perform the matrix-vector operation `y = α*A*x + β*y`:
+    c_dgemv( CblasRowMajor, CblasNoTrans, M, N, 1.0, A, M, x, 1, 1.0, y, 1 );
+
+    // Print the result:
+    for ( int i = 0; i < N; i++ ) {
+        printf( "y[ %i ] = %lf\n", i, y[ i ] );
+    }
+
+    // Perform the matrix-vector operation `y = α*A*x + β*y` using alternative indexing semantics:
+    c_dgemv_ndarray( CblasNoTrans, M, N, 1.0, A, N, 1, 0, x, 1, 0, 1.0, y, 1, 0 );
+
+    // Print the result:
+    for ( int i = 0; i < N; i++ ) {
+        printf( "y[ %i ] = %lf\n", i, y[ i ] );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -225,7 +385,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -255,8 +415,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/blas-base-dgemv.svg
 [npm-url]: https://npmjs.org/package/@stdlib/blas-base-dgemv
 
-[test-image]: https://github.com/stdlib-js/blas-base-dgemv/actions/workflows/test.yml/badge.svg?branch=v0.1.1
-[test-url]: https://github.com/stdlib-js/blas-base-dgemv/actions/workflows/test.yml?query=branch:v0.1.1
+[test-image]: https://github.com/stdlib-js/blas-base-dgemv/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/blas-base-dgemv/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/blas-base-dgemv/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/blas-base-dgemv?branch=main
