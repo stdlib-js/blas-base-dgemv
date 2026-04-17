@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-04)
+## Unreleased (2026-04-17)
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`26071a9`](https://github.com/stdlib-js/stdlib/commit/26071a932480eb7f4d0e40a124130e8172c44cba) - fix comparison
+
+</section>
+
+<!-- /.bug-fixes -->
 
 <section class="issues">
 
@@ -24,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`26071a9`](https://github.com/stdlib-js/stdlib/commit/26071a932480eb7f4d0e40a124130e8172c44cba) - **fix:** fix comparison _(by Athan Reines)_
 -   [`121fdcb`](https://github.com/stdlib-js/stdlib/commit/121fdcb93d35bc185984e33c19f483770dc6b5f7) - **chore:** fix JavaScript lint errors (issue #10621) [(#10623)](https://github.com/stdlib-js/stdlib/pull/10623) _(by Partha Das)_
 -   [`570ea52`](https://github.com/stdlib-js/stdlib/commit/570ea52237318497987a193d4b8069a6dceff78f) - **bench:** use string interpolation in `blas/base/dgemv` [(#10290)](https://github.com/stdlib-js/stdlib/pull/10290) _(by Om-A-osc)_
 
@@ -37,8 +48,9 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Om-A-osc
 -   Partha Das
 
