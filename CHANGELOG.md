@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-17)
+## Unreleased (2026-05-09)
 
 <section class="bug-fixes">
 
@@ -21,9 +21,9 @@
 
 ### Closed Issues
 
-This release closes the following issue:
+A total of 2 issues were closed in this release:
 
-[#10621](https://github.com/stdlib-js/stdlib/issues/10621)
+[#10621](https://github.com/stdlib-js/stdlib/issues/10621), [#11235](https://github.com/stdlib-js/stdlib/issues/11235)
 
 </section>
 
@@ -35,6 +35,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`41d54f5`](https://github.com/stdlib-js/stdlib/commit/41d54f576b76d7c3491f711198f1dd7009e8e072) - **chore:** fix JavaScript lint errors [(#11703)](https://github.com/stdlib-js/stdlib/pull/11703) _(by Bhumika Sudarshani)_
 -   [`ebc279f`](https://github.com/stdlib-js/stdlib/commit/ebc279f1f644eafb21ad4db9d322196bd4318b7a) - **fix:** use correct variable in interpolation _(by Athan Reines)_
 -   [`26071a9`](https://github.com/stdlib-js/stdlib/commit/26071a932480eb7f4d0e40a124130e8172c44cba) - **fix:** fix comparison _(by Athan Reines)_
 -   [`121fdcb`](https://github.com/stdlib-js/stdlib/commit/121fdcb93d35bc185984e33c19f483770dc6b5f7) - **chore:** fix JavaScript lint errors (issue #10621) [(#10623)](https://github.com/stdlib-js/stdlib/pull/10623) _(by Partha Das)_
@@ -50,9 +51,10 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
+-   Bhumika Sudarshani
 -   Om-A-osc
 -   Partha Das
 
