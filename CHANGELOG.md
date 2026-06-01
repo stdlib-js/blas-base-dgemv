@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-05-19)
+## Unreleased (2026-06-01)
 
 <section class="bug-fixes">
 
@@ -35,6 +35,7 @@ A total of 2 issues were closed in this release:
 
 <details>
 
+-   [`ebd579a`](https://github.com/stdlib-js/stdlib/commit/ebd579a7d5315aab1c6e346dd3073e13f437dc86) - **refactor:** replace `isMatrixTranspose` with `resolveStr` in `blas/base/dgemv` [(#12422)](https://github.com/stdlib-js/stdlib/pull/12422) _(by Kaustubh Patange)_
 -   [`9559de0`](https://github.com/stdlib-js/stdlib/commit/9559de093ed0c43ba65c7b6829be61a5967cd2f4) - **chore:** propagate typo and doc-note fixes across `blas` sibling packages [(#12202)](https://github.com/stdlib-js/stdlib/pull/12202) _(by Philipp Burckhardt)_
 -   [`41d54f5`](https://github.com/stdlib-js/stdlib/commit/41d54f576b76d7c3491f711198f1dd7009e8e072) - **chore:** fix JavaScript lint errors [(#11703)](https://github.com/stdlib-js/stdlib/pull/11703) _(by Bhumika Sudarshani)_
 -   [`ebc279f`](https://github.com/stdlib-js/stdlib/commit/ebc279f1f644eafb21ad4db9d322196bd4318b7a) - **fix:** use correct variable in interpolation _(by Athan Reines)_
@@ -52,10 +53,11 @@ A total of 2 issues were closed in this release:
 
 ### Contributors
 
-A total of 5 people contributed to this release. Thank you to the following contributors:
+A total of 6 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Bhumika Sudarshani
+-   Kaustubh Patange
 -   Om-A-osc
 -   Partha Das
 -   Philipp Burckhardt
