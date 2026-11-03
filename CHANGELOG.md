@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-26)
+## Unreleased (2026-11-03)
 
 <section class="bug-fixes">
 
@@ -35,6 +35,7 @@ A total of 2 issues were closed in this release:
 
 <details>
 
+-   [`78ad2fa`](https://github.com/stdlib-js/stdlib/commit/78ad2fa5dbb12ce808dec93197d5343745ff91b8) - **docs:** normalize trailing newlines in REPL help texts [(#16420)](https://github.com/stdlib-js/stdlib/pull/16420) _(by Philipp Burckhardt)_
 -   [`3208321`](https://github.com/stdlib-js/stdlib/commit/320832192c8d32b18d24c7342ba1cf03cc5affea) - **bench:** refactor to use dynamic memory allocation [(#14099)](https://github.com/stdlib-js/stdlib/pull/14099) _(by Philipp Burckhardt, Athan Reines)_
 -   [`2c69cdd`](https://github.com/stdlib-js/stdlib/commit/2c69cdd44b2fbde5ee16ddbf87ec66e2167e621b) - **refactor:** replace `isMatrixTranspose` with `resolveTrans` in `*gemv` packages [(#12825)](https://github.com/stdlib-js/stdlib/pull/12825) _(by Kaustubh Patange)_
 -   [`ebd579a`](https://github.com/stdlib-js/stdlib/commit/ebd579a7d5315aab1c6e346dd3073e13f437dc86) - **refactor:** replace `isMatrixTranspose` with `resolveStr` in `blas/base/dgemv` [(#12422)](https://github.com/stdlib-js/stdlib/pull/12422) _(by Kaustubh Patange)_
